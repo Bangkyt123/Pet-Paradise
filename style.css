@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.slide {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('https://img.freepik.com/free-photo/adorable-pets-collection_23-2149021648.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0055aa;
+    transform: scale(1.05);
+}
+
+.slide-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+}
+/* Style Header & Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-image {
+    max-height: 40px; /* Adjust logo size here */
+    width: auto;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    color: white;
+    display: none; /* Hide hamburger by default for desktop */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f18930;
+}
+
+/* Style Section */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Background untuk setiap section */
+.section-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#home.section-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://img.freepik.com/free-photo/cute-domestic-kitten-sitting-human-hand-cute-pet-concept_23-2149073337.jpg');
+}
+
+#about.section-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://img.freepik.com/free-photo/group-portrait-adorable-puppies_53876-64778.jpg');
+}
+
+#products.section-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://img.freepik.com/free-photo/assortment-with-food-bowl-pet-shop_23-2148899124.jpg');
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+section h1, section h2, section h3, section p {
+    color: black; /* Ensuring text is visible */
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Products Section */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.Products {
+    width: 30%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.Products:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Products img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.Products h3 {
+    margin-top: 10px;
+    color: #f18930;
+}
+
+/* Style Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer-content {
+    width: 30%;
+}
+
+footer h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+.footer-content p {
+    margin: auto;
+    padding: 7px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-content ul {
+    text-align: center;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition: 0.3s;
+}
+
+.list li:hover::before {
+    width: 70px;
+}
+
+.list li a {
+    font-size: 14px;
+    color: white;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f18930;
+}
+
+.social-icons i:hover {
+    color: #f18930;
+    transform: scale(1.2);
+}
+
+.bottom-bar {
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p {
+    color: #191919;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger only on mobile */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 1001;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        color: black;
+        display: block;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Products {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
